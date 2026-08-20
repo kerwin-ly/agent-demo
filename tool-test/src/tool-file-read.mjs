@@ -6,7 +6,18 @@ import fs from 'node:fs/promises';
 import { z } from 'zod';
 import dotenv from 'dotenv';
 import path from 'path';
+import { spawn } from 'node:child_process';
 
+
+const command = 'ls -la';
+
+const [cmd, ...args] = command.split(' ');
+
+const child = spawn(cmd, args, {
+  cwd: process.cwd(),
+  stdio: 'inherit',
+  shell: true
+})
 dotenv.config({
   path: path.resolve(process.cwd(), '../../.env')
 });
@@ -56,7 +67,7 @@ const messages = [
 ];
 
 let response = await modelWithTools.invoke(messages);
-// console.log(response);
+console.log(response);
 
 messages.push(response);
 
