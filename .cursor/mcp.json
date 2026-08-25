@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "my-mcp-server": {
+      "command": "node",
+      "args": ["/Users/kerwin/Desktop/git-project/agent-demo/tool-test/src/my-mcp-server.mjs"]
+    }
+  }
+}
