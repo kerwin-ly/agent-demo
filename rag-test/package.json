@@ -10,8 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@langchain/classic": "^1.0.45",
+    "@langchain/community": "^1.1.29",
     "@langchain/core": "^1.2.9",
     "@langchain/openai": "^1.5.10",
+    "@langchain/textsplitters": "^1.0.1",
     "dotenv": "^17.4.2"
   }
 }
