@@ -1,3 +1,4 @@
+// client.insert
 import dotenv from "dotenv";
 import path from "path";
 import {
@@ -39,7 +40,7 @@ async function main() {
     await client.connectPromise;
     console.log("✓ Connected\n");
 
-    // 创建集合
+    // 创建集合(table)
     console.log("Creating collection...");
     await client.createCollection({
       collection_name: COLLECTION_NAME,
