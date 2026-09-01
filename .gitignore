@@ -1,2 +1,4 @@
 .env
+milvus
 node_modules/
+.DS_Store

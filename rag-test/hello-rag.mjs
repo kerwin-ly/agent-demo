@@ -17,7 +17,7 @@ const model = new ChatOpenAI({
 });
 
 const embeddings = new OpenAIEmbeddings({
-  modelName: process.env.EMBEDDINGS_MODULE_NAME || "undefined",
+  modelName: process.env.EMBEDDINGS_MODEL_NAME || "undefined",
   apiKey: process.env.OPENAI_API_KEY,
   configuration: {
     baseURL: process.env.OPENAI_BASE_URL,
