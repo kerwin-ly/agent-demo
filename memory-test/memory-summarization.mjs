@@ -1,3 +1,6 @@
+/**
+ * 当token超过上下文限制时，对之前部分进行summarize，然后再给到LLM分析
+ */
 import dotenv from "dotenv";
 import { ChatOpenAI } from "@langchain/openai";
 import { InMemoryChatMessageHistory } from "@langchain/core/chat_history";
@@ -66,6 +69,7 @@ async function summarizeHistory(messages) {
     return "";
   }
 
+  // 将AIMessage, HumanMessage等转换成普通字符串，发送给ai总结
   const conversationText = getBufferString(messages, {
     humanPrefix: "用户",
     aiPrefix: "助手",
@@ -322,7 +326,6 @@ ${summary}`,
     console.log(`\n[${index + 1}] ${msg.constructor.name}:`, msg.content);
   });
 
-  // 如果需要真正调用 LLM，可以取消下面的注释：
   //
   // const response = await model.invoke(messagesForLLM);
   //

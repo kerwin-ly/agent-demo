@@ -1,3 +1,7 @@
+
+/**
+ * 当token超过上下文限制时，对之前部分进行截取
+ */
 import { InMemoryChatMessageHistory } from "@langchain/core/chat_history";
 import { HumanMessage, AIMessage, trimMessages } from "@langchain/core/messages";
 import { getEncoding } from "js-tiktoken";

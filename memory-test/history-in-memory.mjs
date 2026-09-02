@@ -1,3 +1,6 @@
+/**
+ * 将history messages存入到内存中管理
+ */
 import dotenv from "dotenv";
 import path from "path";
 import { ChatOpenAI } from "@langchain/openai";
