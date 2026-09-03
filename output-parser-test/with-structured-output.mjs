@@ -1,3 +1,6 @@
+/**
+ * 使用structuredOutputParser
+ */
 import dotenv from "dotenv";
 import path from 'path';
 import { ChatOpenAI } from '@langchain/openai';
@@ -24,13 +27,19 @@ const scientistSchema = z.object({
 });
 
 // 使用 withStructuredOutput 方法
-const structuredModel = model.withStructuredOutput(scientistSchema);
+const structuredModel = model.withStructuredOutput(scientistSchema, {
+    method: 'functionCalling' // 用于流式返回
+});
 
 // 调用模型
-const result = await structuredModel.invoke("介绍一下爱因斯坦");
+const result = await structuredModel.stream("介绍一下爱因斯坦");
 
-console.log("结构化结果:", JSON.stringify(result, null, 2));
-console.log(`\n姓名: ${result.name}`);
-console.log(`出生年份: ${result.birth_year}`);
-console.log(`国籍: ${result.nationality}`);
-console.log(`研究领域: ${result.fields.join(', ')}`);
+for await (const chunk of result) {
+    console.log(JSON.stringify(chunk, null, 2))
+}
+
+// console.log("结构化结果:", JSON.stringify(result, null, 2));
+// console.log(`\n姓名: ${result.name}`);
+// console.log(`出生年份: ${result.birth_year}`);
+// console.log(`国籍: ${result.nationality}`);
+// console.log(`研究领域: ${result.fields.join(', ')}`);
