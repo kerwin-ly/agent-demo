@@ -16,3 +16,20 @@
 2026-11-03 07:48:56.764+0000 INFO  creationDate: 2026-11-03T07:48:53.196Z
 2026-11-03 07:48:56.766+0000 INFO  Started.
 2026-11-03 07:49:17.137+0000 WARN  [bolt-8] The client is unauthorized due to authentication failure.
+2026-11-10 06:04:09.747+0000 INFO  Logging config in use: Embedded default config 'default-user-logs.xml'
+2026-11-10 06:04:09.767+0000 INFO  Starting...
+2026-11-10 06:04:10.998+0000 INFO  This instance is ServerId{0efe6fdf} (0efe6fdf-9887-4de7-8430-885f3b29dc9a)
+2026-11-10 06:04:13.010+0000 INFO  ======== Neo4j 2026.10.1 ========
+2026-11-10 06:04:13.665+0000 INFO  X-Forward header processing enabled with security controls
+2026-11-10 06:04:13.668+0000 WARN  SECURITY WARNING: X-Forward headers accepted from any source - configure allow_proxies
+2026-11-10 06:04:13.670+0000 WARN  SECURITY WARNING: X-Forward headers accept any hostname - configure allow_hosts
+2026-11-10 06:04:16.092+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+2026-11-10 06:04:17.095+0000 INFO  This server has built-in support for online monitoring through Fleet Manager. Visit https://console.neo4j.io to get started!
+2026-11-10 06:04:18.370+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+2026-11-10 06:04:18.388+0000 INFO  Fleet discovery broadcasts have been enabled for 1 network: 172.21.255.255
+2026-11-10 06:04:19.273+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+2026-11-10 06:04:19.276+0000 INFO  Remote interface available at http://localhost:7474/
+2026-11-10 06:04:19.282+0000 INFO  id: DD4CC60BFB028A94D36A9B473DF4F2DB33293CFFF81BF6A6208F8B4A93B9AF7D
+2026-11-10 06:04:19.284+0000 INFO  name: system
+2026-11-10 06:04:19.286+0000 INFO  creationDate: 2026-11-03T07:48:53.196Z
+2026-11-10 06:04:19.288+0000 INFO  Started.
